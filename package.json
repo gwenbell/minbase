@@ -1,6 +1,6 @@
 {
   "name": "minbase",
-  "description": "minimal as possible sbot client library",
+  "description": "minimal as possible secure scuttlebutt client",
   "version": "1.0.0",
   "homepage": "https://github.com/evbogue/minbase",
   "repository": {
