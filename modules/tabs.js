@@ -1,9 +1,13 @@
-var Tabs = require('hypertabs')
+var Tabs = require('hypertabs-vertical')
 var h = require('hyperscript')
 var pull = require('pull-stream')
 var u = require('../util')
 var keyscroll = require('../keyscroll')
 var open = require('open-external')
+var ref = require('ssb-ref')
+var visualize = require('visualize-buffer')
+var id = require('../keys').id
+var getAvatar = require('ssb-avatar')
 
 function ancestor (el) {
   if(!el) return
@@ -11,11 +15,21 @@ function ancestor (el) {
   return el
 }
 
-exports.needs = {screen_view: 'first', search_box: 'first', menu: 'first'}
+exports.needs = {
+  emoji_url: 'first',
+  screen_view: 'first', 
+  search_box: 'first', 
+  blob_url: 'first',
+  menu: 'first', 
+  sbot_links: 'first'
+}
 
 exports.gives = 'screen_view'
 
+
 exports.create = function (api) {
+
+
   return function (path) {
     if(path !== 'tabs')
       return
@@ -51,10 +65,28 @@ exports.create = function (api) {
       }
     })
 
+    var img = visualize(new Buffer(id.substring(1), 'base64'), 256)
+    img.classList.add('avatar--full')
+    var selected = null, selected_data = null
+
+    getAvatar({links: api.sbot_links}, id, id, function (err, avatar) {
+      if (err) return console.error(err)
+      //don't show user has already selected an avatar.
+      if(selected) return
+      if(ref.isBlob(avatar.image))
+        img.src = api.blob_url(avatar.image)
+    })
+     
     //reposition hypertabs menu to inside a container...
-    tabs.insertBefore(h('div.header.row',
-        h('div.header__tabs.row', tabs.firstChild), //tabs
-        h('div.header__search.row.end', h('div', search), api.menu())
+    tabs.insertBefore(h('div.header.left',
+      h('div', 
+        h('a', {href: '#' + id}, img)
+      ),
+      h('p.edit', 
+        h('a', {innerHTML: '<a href="#Edit">Edit your profile</a> <a href="#Key"><img src="' + api.emoji_url('key') + '" class="emoji" /></a>'})
+      ),
+      h('div.header__tabs', tabs.firstChild), //tabs
+      h('div.header__search', h('div', search), api.menu())
     ), tabs.firstChild)
   //  tabs.insertBefore(search, tabs.firstChild.nextSibling)
 
@@ -63,7 +95,7 @@ exports.create = function (api) {
   //  catch (_) { }
 
     if(!saved || saved.length < 3)
-      saved = ['Public', 'Direct', 'Mentions', 'Your Key']
+      saved = ['Public', 'Direct', 'Mentions']
 
     saved.forEach(function (path) {
       var el = api.screen_view(path)
