@@ -2,6 +2,11 @@ body {
   font-family: monospace;
 }
 
+* {
+  word-wrap: break-word;
+}
+
+
 pre {
     height: auto;
     max-height: 200px;
