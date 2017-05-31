@@ -23,12 +23,11 @@ exports.create = function (api) {
 
   function mini(msg, el) {
     var div = h('div.message.message--mini',
-      h('div.row',
-        h('div',
-          api.avatar_link(msg.value.author, api.avatar_name(msg.value.author)),
-          h('span.message_content', el)),
-        h('div.message_meta.row', api.message_meta(msg))
-      )
+      h('div.title',
+        h('div.avatar', api.avatar(msg.value.author, 'thumbnail')),
+        h('div.message_meta', api.message_meta(msg))
+      ),
+      h('div.message_content', el)
     )
     div.setAttribute('tabindex', '0')
     return div
@@ -39,7 +38,7 @@ exports.create = function (api) {
     if(el) return mini(msg, el)
 
     var el = api.message_content(msg)
-    //if(!el) return mini(msg, message_content_mini_fallback(msg))
+    if(!el) return mini(msg, message_content_mini_fallback(msg))
 
     var links = []
     for(var k in CACHE) {
@@ -59,25 +58,25 @@ exports.create = function (api) {
         }))
       ))
 
-  //  pull(
-  //    sbot_links({dest: msg.key, rel: 'mentions', keys: true}),
-  //    pull.collect(function (err, links) {
-  //      if(links.length)
-  //        backlinks.appendChild(h('label', 'backlinks:', 
-  //          h('div', links.map(function (link) {
-  //            return message_link(link.key)
-  //          }))
-  //        ))
-  //    })
-  //  )
+    //pull(
+    //  sbot_links({dest: msg.key, rel: 'mentions', keys: true}),
+    //  pull.collect(function (err, links) {
+    //    if(links.length)
+    //      backlinks.appendChild(h('label', 'backlinks:', 
+    //        h('div', links.map(function (link) {
+    //          return message_link(link.key)
+    //        }))
+    //      ))
+    //  })
+    //)
 
     var msg = h('div.message',
-      h('div.title.row',
+      h('div.title',
         h('div.avatar', api.avatar(msg.value.author, 'thumbnail')),
-        h('div.message_meta.row', api.message_meta(msg))
+        h('div.message_meta', api.message_meta(msg))
       ),
       h('div.message_content', el),
-      h('div.message_actions.row',
+      h('div.message_actions',
         h('div.actions', api.message_action(msg),
           h('a', {href: '#' + msg.key}, 'Reply')
         )

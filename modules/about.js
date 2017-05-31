@@ -1,7 +1,7 @@
 var h = require('hyperscript')
 
 function idLink (id) {
-  return h('a', {href:'#'+id}, id)
+  return h('a', {href:'#'+id}, id.substring(0, 10)+'...')
 }
 
 function asLink (ln) {
