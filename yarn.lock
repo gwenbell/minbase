@@ -693,9 +693,9 @@ flumeview-query@^3.0.0, flumeview-query@^3.0.3:
     pull-sink-through "0.0.0"
     pull-stream "^3.4.0"
 
-flumeview-reduce@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/flumeview-reduce/-/flumeview-reduce-1.0.4.tgz#b40092d67c8255e886198294d4cc824cc4cf6308"
+flumeview-reduce@^1.0.4, flumeview-reduce@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/flumeview-reduce/-/flumeview-reduce-1.1.0.tgz#de42cb05adffd552d068ce3956b9f1f792641313"
   dependencies:
     atomic-file "^0.3.0"
     deep-equal "^1.0.1"
@@ -1090,8 +1090,8 @@ is-decimal@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-decimal/-/is-decimal-1.0.0.tgz#940579b6ea63c628080a69e62bda88c8470b4fe0"
 
 is-dotfile@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/is-dotfile/-/is-dotfile-1.0.2.tgz#2c132383f39199f8edc268ca01b9b007d205cc4d"
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/is-dotfile/-/is-dotfile-1.0.3.tgz#a6a2f32ffd2dfb04f5ca25ecd0f6b83cf798a1e1"
 
 is-electron@^2.0.0:
   version "2.0.0"
@@ -1352,8 +1352,8 @@ leveldown@^1.4.6, leveldown@~1.7.0:
     prebuild-install "^2.1.0"
 
 levelup@^1.3.2, levelup@~1.3.0:
-  version "1.3.7"
-  resolved "https://registry.yarnpkg.com/levelup/-/levelup-1.3.7.tgz#70df7c1116fbc8b9efc434f4cfa21f27e2eef9f9"
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/levelup/-/levelup-1.3.8.tgz#fb442c488efbea1043f7eb9929a792a74fbd1da6"
   dependencies:
     deferred-leveldown "~1.2.1"
     level-codec "~6.1.0"
@@ -1525,13 +1525,17 @@ mime@^1.2.11:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimist@0.0.8, minimist@~0.0.1, minimist@~0.0.7:
+minimist@0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
 
 minimist@^1.1.0, minimist@^1.1.3, minimist@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
+
+minimist@~0.0.1, minimist@~0.0.7:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
 
 "mkdirp@>=0.5 0", mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.1"
@@ -1633,16 +1637,16 @@ ncp@~2.0.0:
   resolved "https://registry.yarnpkg.com/ncp/-/ncp-2.0.0.tgz#195a21d6c46e361d2fb1281ba38b91e9df7bdbb3"
 
 node-abi@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-2.0.2.tgz#00f3e0a58100eb480133b48c99a32cc1f9e6c93e"
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-2.0.3.tgz#0ca67e5e667b8e1343549ca17153a815d0bbfdaa"
 
 node-gyp-build@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-3.2.0.tgz#283be074924aabb9240ce3f880c7ca0c8e7a00dc"
 
 node-pre-gyp@^0.6.29:
-  version "0.6.34"
-  resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.6.34.tgz#94ad1c798a11d7fc67381b50d47f8cc18d9799f7"
+  version "0.6.36"
+  resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.6.36.tgz#db604112cb74e0d477554e9b505b17abddfab786"
   dependencies:
     mkdirp "^0.5.1"
     nopt "^4.0.1"
@@ -2145,7 +2149,7 @@ pull-stream@^2.28.3:
   dependencies:
     pull-core "~1.1.0"
 
-pull-stream@^3.0.0, pull-stream@^3.1.0, pull-stream@^3.2.3, pull-stream@^3.3.0, pull-stream@^3.4.0, pull-stream@^3.4.2, pull-stream@^3.4.3, pull-stream@^3.4.5, pull-stream@^3.5.0:
+pull-stream@^3.0.0, pull-stream@^3.1.0, pull-stream@^3.2.3, pull-stream@^3.3.0, pull-stream@^3.4.0, pull-stream@^3.4.2, pull-stream@^3.4.3, pull-stream@^3.4.5, pull-stream@^3.5.0, pull-stream@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/pull-stream/-/pull-stream-3.6.0.tgz#59d033a6815d4e3097d47c3d2b1893a9e58a2351"
 
@@ -2403,7 +2407,7 @@ safe-buffer@^5.0.1:
 
 scuttlebot@ssbc/scuttlebot#flume:
   version "9.8.0"
-  resolved "https://codeload.github.com/ssbc/scuttlebot/tar.gz/4bbdcb0f89770891b04720e98b31f99295fe0d13"
+  resolved "https://codeload.github.com/ssbc/scuttlebot/tar.gz/d42610e87a071fe62aa1d0ad3053db084fb8076d"
   dependencies:
     atomic-file "0.0.1"
     bash-color "~0.0.3"
@@ -2453,7 +2457,7 @@ scuttlebot@ssbc/scuttlebot#flume:
     ssb-client "^4.4.1"
     ssb-config "^2.0.0"
     ssb-ebt "0.0.7"
-    ssb-friends "^1.0.0"
+    ssb-friends "^2.0.0"
     ssb-keys "^7.0.0"
     ssb-links "^3.0.0"
     ssb-msgs "~5.2.0"
@@ -2698,11 +2702,17 @@ ssb-feed@^2.2.1:
     ssb-keys "^7.0.0"
     ssb-ref "^2.0.0"
 
-ssb-friends@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ssb-friends/-/ssb-friends-1.0.0.tgz#73e9a202d59cdd5e76d81c5e774eea064a13b0dc"
+ssb-friends@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/ssb-friends/-/ssb-friends-2.0.1.tgz#b84612f6c3f75fc895fc1d8bc1c25964596707dc"
   dependencies:
+    flumeview-reduce "^1.1.0"
     graphreduce "^3.0.3"
+    obv "0.0.1"
+    pull-cont "^0.1.1"
+    pull-flatmap "0.0.1"
+    pull-stream "^3.6.0"
+    ssb-ref "^2.7.1"
 
 ssb-fulltext@^1.0.1:
   version "1.0.1"
