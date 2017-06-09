@@ -1261,12 +1261,6 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-jodid25519@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/jodid25519/-/jodid25519-1.0.2.tgz#06d4912255093419477d425633606e0e90782967"
-  dependencies:
-    jsbn "~0.1.0"
-
 jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
@@ -1413,8 +1407,8 @@ level@^1.4.0, level@^1.5.0, level@^1.7.0:
     leveldown "~1.7.0"
 
 leveldown@^1.4.6, leveldown@~1.7.0:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/leveldown/-/leveldown-1.7.1.tgz#82b9865c95a9ff4df3d8c440324bd6080c17864d"
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/leveldown/-/leveldown-1.7.2.tgz#5e3467bb27ee246a4a7b8dbd8fb2b16206a6eb8b"
   dependencies:
     abstract-leveldown "~2.6.1"
     bindings "~1.2.1"
@@ -1603,17 +1597,13 @@ mime@^1.2.11:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimist@0.0.8:
+minimist@0.0.8, minimist@~0.0.1, minimist@~0.0.7:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
 
 minimist@^1.1.0, minimist@^1.1.3, minimist@^1.2.0, minimist@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
-
-minimist@~0.0.1, minimist@~0.0.7:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
 
 "mkdirp@>=0.5 0", mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.1"
@@ -1884,8 +1874,8 @@ osenv@^0.1.3, osenv@^0.1.4:
     os-tmpdir "^1.0.0"
 
 packet-stream-codec@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/packet-stream-codec/-/packet-stream-codec-1.1.1.tgz#107dec850ad9d27a63310eb1470e82a7e90a1c58"
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/packet-stream-codec/-/packet-stream-codec-1.1.2.tgz#79b302fc144cdfbb4ab6feba7040e6a5d99c79c7"
   dependencies:
     pull-reader "^1.2.4"
     pull-through "^1.0.17"
@@ -2223,13 +2213,7 @@ pull-stream-to-stream@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/pull-stream-to-stream/-/pull-stream-to-stream-1.3.4.tgz#3f81d8216bd18d2bfd1a198190471180e2738399"
 
-"pull-stream@>=2.20 <3", pull-stream@~2.26.0:
-  version "2.26.1"
-  resolved "https://registry.yarnpkg.com/pull-stream/-/pull-stream-2.26.1.tgz#4bf2559de87b8af2f5b96b7190d2ee431ca1e519"
-  dependencies:
-    pull-core "~1.1.0"
-
-pull-stream@^2.28.3:
+"pull-stream@>=2.20 <3", pull-stream@^2.28.3:
   version "2.28.4"
   resolved "https://registry.yarnpkg.com/pull-stream/-/pull-stream-2.28.4.tgz#7ea97413c1619c20bc3bdf9e10e91347b03253e4"
   dependencies:
@@ -2244,6 +2228,12 @@ pull-stream@~2.18.2:
   resolved "https://registry.yarnpkg.com/pull-stream/-/pull-stream-2.18.3.tgz#7a07962234d7579c908860db8c27f7f34fd45000"
   dependencies:
     pull-core "~1.0.0"
+
+pull-stream@~2.26.0:
+  version "2.26.1"
+  resolved "https://registry.yarnpkg.com/pull-stream/-/pull-stream-2.26.1.tgz#4bf2559de87b8af2f5b96b7190d2ee431ca1e519"
+  dependencies:
+    pull-core "~1.1.0"
 
 pull-stream@~3.5.0:
   version "3.5.0"
@@ -2278,8 +2268,8 @@ pull-write-file@^0.2.1:
   resolved "https://registry.yarnpkg.com/pull-write-file/-/pull-write-file-0.2.4.tgz#437344aeb2189f65e678ed1af37f0f760a5453ef"
 
 pull-write@^1.0.2, pull-write@^1.1.0, pull-write@^1.1.1:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/pull-write/-/pull-write-1.1.2.tgz#60274aa478f8c827710b92095325331ab175fdd2"
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/pull-write/-/pull-write-1.1.4.tgz#dddea31493b48f6768b84a281d01eb3b531fe0b8"
   dependencies:
     looper "^4.0.0"
     pull-cat "^1.1.11"
@@ -2426,8 +2416,8 @@ remark@^3.2.2:
     ware "^1.3.0"
 
 remove-trailing-separator@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.0.1.tgz#615ebb96af559552d4bf4057c8436d486ab63cc4"
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.0.2.tgz#69b062d978727ad14dc6b56ba4ab772fd8d70511"
 
 repeat-element@^1.1.2:
   version "1.1.2"
@@ -2501,9 +2491,9 @@ safe-buffer@^5.0.1, safe-buffer@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7"
 
-scuttlebot@ssbc/scuttlebot#flume:
-  version "9.8.0"
-  resolved "https://codeload.github.com/ssbc/scuttlebot/tar.gz/95671f8a1c271f96a96d605f9cc83598e0a7f337"
+scuttlebot@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/scuttlebot/-/scuttlebot-10.0.0.tgz#dd0af5ddca27eaf626d74350b496ebecc25dc363"
   dependencies:
     atomic-file "0.0.1"
     bash-color "~0.0.3"
@@ -2548,7 +2538,7 @@ scuttlebot@ssbc/scuttlebot#flume:
     pull-stringify "~1.2.2"
     rimraf "^2.4.2"
     secret-stack "^3.2.0"
-    secure-scuttlebutt "^16.2.4"
+    secure-scuttlebutt "^16.3.0"
     ssb-blobs "^1.0.1"
     ssb-client "^4.4.1"
     ssb-config "^2.0.0"
@@ -2587,9 +2577,9 @@ secret-stack@^3.2.0:
     pull-stream "^3.4.5"
     stream-to-pull-stream "^1.6.1"
 
-secure-scuttlebutt@^16.2.4:
-  version "16.2.4"
-  resolved "https://registry.yarnpkg.com/secure-scuttlebutt/-/secure-scuttlebutt-16.2.4.tgz#a9274767178b90c272bc053b156eb68f0349df6f"
+secure-scuttlebutt@^16.3.0:
+  version "16.3.0"
+  resolved "https://registry.yarnpkg.com/secure-scuttlebutt/-/secure-scuttlebutt-16.3.0.tgz#8a5fe9e1f77d8ed55d85d07a0ab9010ca3c768a4"
   dependencies:
     bytewise "^1.1.0"
     cont "~1.0.0"
@@ -2788,9 +2778,9 @@ ssb-ebt@0.0.7:
     pull-cont "^0.1.1"
     pull-stream "^3.5.0"
 
-ssb-ebt@1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/ssb-ebt/-/ssb-ebt-1.0.7.tgz#9f991ab402cb9061a6e10b4a96d69a5dbd5af3de"
+ssb-ebt@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/ssb-ebt/-/ssb-ebt-1.0.8.tgz#92b03579ffe212cb8cb135576261af565c99b3b5"
   dependencies:
     base64-url "^1.3.3"
     cont "^1.0.3"
@@ -2810,7 +2800,7 @@ ssb-feed@^2.2.1:
     ssb-keys "^7.0.0"
     ssb-ref "^2.0.0"
 
-ssb-friends@2.0.3, ssb-friends@^2.0.1:
+ssb-friends@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/ssb-friends/-/ssb-friends-2.0.3.tgz#3d1836fc6e101b6b2c5e421cfca33341e8d29fd9"
   dependencies:
@@ -2932,8 +2922,8 @@ ssb-ws@^1.0.1, ssb-ws@^1.0.3:
     web-bootloader "^0.1.0"
 
 sshpk@^1.7.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.13.0.tgz#ff2a3e4fd04497555fed97b39a0fd82fafb3a33c"
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.13.1.tgz#512df6da6287144316dc4c18fe1cf1d940739be3"
   dependencies:
     asn1 "~0.2.3"
     assert-plus "^1.0.0"
@@ -2942,7 +2932,6 @@ sshpk@^1.7.0:
   optionalDependencies:
     bcrypt-pbkdf "^1.0.0"
     ecc-jsbn "~0.1.1"
-    jodid25519 "^1.0.0"
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
