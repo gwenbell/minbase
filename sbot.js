@@ -48,7 +48,7 @@ if (argv[0] == 'server') {
     .use(require('ssb-links'))
     .use(require('ssb-query'))
     .use(require('ssb-ebt'))
-    .use(require('ssb-fulltext'))
+    //.use(require('ssb-fulltext'))
 
   // add third-party plugins
   //require('scuttlebot/plugins/plugins').loadUserPlugins(createSbot, config)
