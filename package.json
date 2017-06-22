@@ -27,7 +27,7 @@
     "open-external": "^0.1.1",
     "pull-cat": "^1.1.9",
     "pull-many": "^1.0.7",
-    "pull-next": "^0.0.1",
+    "pull-next": "^1.0.0",
     "pull-paramap": "^1.1.6",
     "pull-pause": "^0.0.1",
     "pull-reconnect": "^0.0.3",
