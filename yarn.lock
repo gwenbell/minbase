@@ -489,7 +489,7 @@ define-properties@^1.1.2:
     foreach "^2.0.5"
     object-keys "^1.0.8"
 
-defined@~1.0.0:
+defined@^1.0.0, defined@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/defined/-/defined-1.0.0.tgz#c98d9bcef75674188e110969151199e39b1fa693"
 
@@ -1591,7 +1591,7 @@ muxrpc@^6.1.1, muxrpc@^6.2.2, muxrpc@^6.3.3:
     pull-goodbye "~0.0.1"
     pull-stream "^3.2.3"
 
-muxrpcli@^1.0.0:
+muxrpcli@^1.0.0, muxrpcli@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/muxrpcli/-/muxrpcli-1.1.0.tgz#4ae9ba986ab825c4a5c12fcb71c6daa81eab5158"
   dependencies:
@@ -2141,6 +2141,12 @@ pull-stream@~2.26.0:
 pull-stream@~3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/pull-stream/-/pull-stream-3.5.0.tgz#1ee5b6f76fd3b3a49a5afb6ded5c0320acb3cfc7"
+
+pull-stringify@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/pull-stringify/-/pull-stringify-2.0.0.tgz#22ba31da95af0888e0fb559238b1fa915a6a5b64"
+  dependencies:
+    defined "^1.0.0"
 
 pull-stringify@~1.2.2:
   version "1.2.2"
@@ -2696,7 +2702,7 @@ ssb-feed@^2.2.1:
     ssb-keys "^7.0.0"
     ssb-ref "^2.0.0"
 
-ssb-friends@^2.0.1:
+ssb-friends@^2.0.1, ssb-friends@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/ssb-friends/-/ssb-friends-2.0.3.tgz#3d1836fc6e101b6b2c5e421cfca33341e8d29fd9"
   dependencies:
