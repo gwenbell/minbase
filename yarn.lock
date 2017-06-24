@@ -562,8 +562,8 @@ epidemic-broadcast-trees@^1.0.1:
     pull-stream "^3.5.0"
 
 epidemic-broadcast-trees@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/epidemic-broadcast-trees/-/epidemic-broadcast-trees-2.0.2.tgz#d8b7dcf46527e92c2414ce251a55781230d11820"
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/epidemic-broadcast-trees/-/epidemic-broadcast-trees-2.1.0.tgz#d8b85b3f77624b1da50333a6f6a2af70dc3b4257"
   dependencies:
     explain-error "^1.0.3"
     pull-stream "^3.5.0"
@@ -2045,11 +2045,7 @@ pull-many@^1.0.7, pull-many@~1.0.6:
   dependencies:
     pull-stream "^3.4.5"
 
-pull-next@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/pull-next/-/pull-next-1.0.0.tgz#af46a51f0c5f05539db305f798d5d3389afcbaff"
-
-pull-next@^1.0.1:
+pull-next@^1.0.0, pull-next@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/pull-next/-/pull-next-1.0.1.tgz#03f4d7d19872fc1114161e88db6ecf4c65e61e56"
 
@@ -2402,8 +2398,8 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0:
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
 scuttlebot@^10.0.7:
-  version "10.0.7"
-  resolved "https://registry.yarnpkg.com/scuttlebot/-/scuttlebot-10.0.7.tgz#e2181e27b52c4c6bb7b3fd516c83ace3199b0497"
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/scuttlebot/-/scuttlebot-10.2.1.tgz#e8ce3735febacf6226bf866ea9d7ba5fe3a9add6"
   dependencies:
     atomic-file "0.0.1"
     bash-color "~0.0.3"
