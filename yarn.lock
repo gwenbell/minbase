@@ -2045,13 +2045,13 @@ pull-many@^1.0.7, pull-many@~1.0.6:
   dependencies:
     pull-stream "^3.4.5"
 
-pull-next@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/pull-next/-/pull-next-0.0.1.tgz#1b6048d036cfae66642fd61fbb506fda9536cf1f"
-
 pull-next@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/pull-next/-/pull-next-1.0.0.tgz#af46a51f0c5f05539db305f798d5d3389afcbaff"
+
+pull-next@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/pull-next/-/pull-next-1.0.1.tgz#03f4d7d19872fc1114161e88db6ecf4c65e61e56"
 
 pull-notify@0.0.2:
   version "0.0.2"
