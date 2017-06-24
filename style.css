@@ -300,16 +300,10 @@ pre {
 
 /* tabs */
 
-.header {
-  border-bottom: 1px inset #ccc;
-  flex-shrink: 0;
-}
-
 .left {
   position: fixed;
   left: 0;
   width: 17%;
-  max-width: 200px;
   height: 100%;
 }
 
