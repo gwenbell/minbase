@@ -554,14 +554,7 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-epidemic-broadcast-trees@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/epidemic-broadcast-trees/-/epidemic-broadcast-trees-1.0.3.tgz#1b43a0ceb39798b85d807e4fa5282b030b26cdcb"
-  dependencies:
-    explain-error "^1.0.3"
-    pull-stream "^3.5.0"
-
-epidemic-broadcast-trees@^2.0.2:
+epidemic-broadcast-trees@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/epidemic-broadcast-trees/-/epidemic-broadcast-trees-2.1.0.tgz#d8b85b3f77624b1da50333a6f6a2af70dc3b4257"
   dependencies:
@@ -1021,13 +1014,6 @@ hypertabs-vertical@^3.0.0:
 increment-buffer@~1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/increment-buffer/-/increment-buffer-1.0.1.tgz#65076d75189d808b39ad13ab5b958e05216f9e0d"
-
-indexhtmlify@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/indexhtmlify/-/indexhtmlify-1.3.1.tgz#884a8f0f18039597fbc278ce7f4ee28850faf463"
-  dependencies:
-    optimist "~0.6.0"
-    through2 "^0.4.1"
 
 indexof@0.0.1:
   version "0.0.1"
@@ -1510,7 +1496,7 @@ mime@^1.2.11:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimist@0.0.8, minimist@~0.0.1, minimist@~0.0.7:
+minimist@0.0.8, minimist@~0.0.7:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
 
@@ -1709,10 +1695,6 @@ object-keys@^1.0.8:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.0.11.tgz#c54601778ad560f1142ce0e01bcca8b56d13426d"
 
-object-keys@~0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-0.4.0.tgz#28a6aae7428dd2c3a92f3d95f21335dd204e0336"
-
 object.omit@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/object.omit/-/object.omit-2.0.1.tgz#1a9c744829f39dbb858c76ca3579ae2a54ebd1fa"
@@ -1759,13 +1741,6 @@ onetime@^1.0.0:
 open-external@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/open-external/-/open-external-0.1.1.tgz#19fad3551841a774f063c371b39fb27175ca8d2e"
-
-optimist@~0.6.0:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.6.1.tgz#da3ea74686fa21a19a111c326e90eb15a0196686"
-  dependencies:
-    minimist "~0.0.1"
-    wordwrap "~0.0.2"
 
 options@>=0.0.5:
   version "0.0.6"
@@ -2243,7 +2218,7 @@ rc@~0.5.4:
     minimist "~0.0.7"
     strip-json-comments "0.1.x"
 
-readable-stream@^1.0.33, readable-stream@~1.0.17, readable-stream@~1.0.26:
+readable-stream@^1.0.33, readable-stream@~1.0.26:
   version "1.0.34"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.0.34.tgz#125820e34bc842d2f2aaafafe4c2916ee32c157c"
   dependencies:
@@ -2410,9 +2385,9 @@ safe-buffer@^5.0.1, safe-buffer@~5.1.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
-scuttlebot@10.1.0:
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/scuttlebot/-/scuttlebot-10.1.0.tgz#93b94da29120d2702cb751afd0b688f0ad8ae61c"
+scuttlebot@^10.3.0:
+  version "10.3.0"
+  resolved "https://registry.yarnpkg.com/scuttlebot/-/scuttlebot-10.3.0.tgz#823e587ed1438b6a2a4b52fb1b5d39b08a63984c"
   dependencies:
     atomic-file "0.0.1"
     bash-color "~0.0.3"
@@ -2461,7 +2436,6 @@ scuttlebot@10.1.0:
     ssb-blobs "^1.0.1"
     ssb-client "^4.4.1"
     ssb-config "^2.0.0"
-    ssb-ebt "0.0.7"
     ssb-friends "^2.0.1"
     ssb-keys "^7.0.0"
     ssb-links "^3.0.0"
@@ -2687,22 +2661,13 @@ ssb-config@^2.0.0, ssb-config@^2.1.1:
     os-homedir "^1.0.1"
     rc "^1.1.6"
 
-ssb-ebt@0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/ssb-ebt/-/ssb-ebt-0.0.7.tgz#0a804ee247785368963cd8a644661b50adc3b26e"
-  dependencies:
-    epidemic-broadcast-trees "^1.0.1"
-    obv "0.0.1"
-    pull-cont "^0.1.1"
-    pull-stream "^3.5.0"
-
-ssb-ebt@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/ssb-ebt/-/ssb-ebt-1.1.2.tgz#32d823609284d1997440ee80f5a79982b312e02c"
+ssb-ebt@^1.1.2:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/ssb-ebt/-/ssb-ebt-1.2.0.tgz#3b9eb83c47157851affed00ee2c7737832fa2688"
   dependencies:
     base64-url "^1.3.3"
     cont "^1.0.3"
-    epidemic-broadcast-trees "^2.0.2"
+    epidemic-broadcast-trees "^2.1.0"
     lossy-store "^1.1.1"
     obv "0.0.1"
     pull-cont "^0.1.1"
@@ -3005,13 +2970,6 @@ textarea-caret-position@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/textarea-caret-position/-/textarea-caret-position-0.1.1.tgz#34372aa755008b1a8451b8a1bb8f07795270fd70"
 
-through2@^0.4.1:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/through2/-/through2-0.4.2.tgz#dbf5866031151ec8352bb6c4db64a2292a840b9b"
-  dependencies:
-    readable-stream "~1.0.17"
-    xtend "~2.1.1"
-
 through@~2.3.4, through@~2.3.8:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
@@ -3209,10 +3167,6 @@ word-wrap@^1.1.0:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
 
-wordwrap@~0.0.2:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
-
 wrap-fn@^0.1.0:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/wrap-fn/-/wrap-fn-0.1.5.tgz#f21b6e41016ff4a7e31720dbc63a09016bdf9845"
@@ -3233,12 +3187,6 @@ ws@^1.1.0:
 xtend@4.0.1, xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
-
-xtend@~2.1.1:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/xtend/-/xtend-2.1.2.tgz#6efecc2a4dad8e6962c4901b337ce7ba87b5d28b"
-  dependencies:
-    object-keys "~0.4.0"
 
 xtend@~3.0.0:
   version "3.0.0"
