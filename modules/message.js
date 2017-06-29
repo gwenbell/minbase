@@ -24,8 +24,8 @@ exports.create = function (api) {
   function mini(msg, el) {
     var div = h('div.message.message--mini',
       h('div.title',
-        h('div.avatar', api.avatar(msg.value.author, 'thumbnail')),
-        h('div.message_meta', api.message_meta(msg))
+        h('div.message_meta', api.message_meta(msg)),
+        h('div.avatar', api.avatar(msg.value.author, 'thumbnail'))
       ),
       h('div.message_content', el)
     )
@@ -58,22 +58,10 @@ exports.create = function (api) {
         }))
       ))
 
-    //pull(
-    //  sbot_links({dest: msg.key, rel: 'mentions', keys: true}),
-    //  pull.collect(function (err, links) {
-    //    if(links.length)
-    //      backlinks.appendChild(h('label', 'backlinks:', 
-    //        h('div', links.map(function (link) {
-    //          return message_link(link.key)
-    //        }))
-    //      ))
-    //  })
-    //)
-
     var msg = h('div.message',
       h('div.title',
-        h('div.avatar', api.avatar(msg.value.author, 'thumbnail')),
-        h('div.message_meta', api.message_meta(msg))
+        h('div.message_meta', api.message_meta(msg)),
+        h('div.avatar', api.avatar(msg.value.author, 'thumbnail'))
       ),
       h('div.message_content', el),
       h('div.message_actions',

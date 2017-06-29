@@ -126,7 +126,7 @@ pre {
 }
 
 .message_meta {
-  // margin-left: auto;
+  float: right;
 }
 
 .message_meta > * {
@@ -222,16 +222,10 @@ pre {
 
 .profile {
   padding: .5ex;
-  // overflow: auto;
-}
-
-.profile input {
-  width: 100%;
 }
 
 .profile__info {
   margin-left: .5em;
-  width: 50%;
 }
 
 /* lightbox - used in message-confirm */
