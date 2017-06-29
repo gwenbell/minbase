@@ -83,18 +83,19 @@ exports.create = function (api) {
       //request follow
       //post pub announce
       //post follow pub
-      var div = h('div.column.scroller__wrapper',
-        h('div.column.scroller__content', {style: 'margin-top: 25%;'},
-          h('h1', {innerHTML: 'The <a href="https://scuttlebot.io">Secure Scuttlebutt</a> Lite Client'}),
-          h('p', "You've been invited to join:"),
-          h('p', h('code', data.invite))
-        ),
-        h('p', h('button', 'Accept', {onclick: attempt})),
-        progress,
-        h('p', "Give this step a moment to finish, once we're done you can pick a name."),
-        h('p', {innerHTML: 'If you have a saved key and remote, <a href="/#Your Key">import them here</a>.'})
+      var div = h('div.column.scroller', {style: 'overflow: auto;'},
+        h('div.column.scroller__wrapper',
+          h('div.column.scroller__content', {style: 'margin-top: 25%;'},
+            h('h1', {innerHTML: 'The <a href="https://scuttlebot.io">Secure Scuttlebutt</a> Lite Client'}),
+            h('p', "You've been invited to join:"),
+            h('p', h('code', data.invite))
+          ),
+          h('p', h('button', 'Accept', {onclick: attempt})),
+          progress,
+          h('p', "Give this step a moment to finish, once we're done you can pick a name."),
+          h('p', {innerHTML: 'If you have a saved key and remote, <a href="/#Key">import them here</a>.'})
+        )
       )
-
       function attempt () {
         self.invite_accept(invite, function (message) {
           progress.next(message)

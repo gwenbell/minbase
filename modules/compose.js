@@ -7,7 +7,7 @@ var lightbox = require('hyperlightbox')
 var cont = require('cont')
 
 exports.needs = {
-  suggest_mentions: 'map', //<-- THIS MUST BE REWRITTEN
+  suggest_mentions: 'map',
   publish: 'first',
   message_content: 'first',
   message_confirm: 'first',
