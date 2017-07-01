@@ -332,6 +332,7 @@ pre {
   overflow-x: hidden;
   min-width: 0px;
   width: 100%;
+  padding-left: 1em;
 }
 
 .hypertabs__tab {
@@ -340,7 +341,7 @@ pre {
   margin-left: -3px;
   border-bottom: none;
   padding-top: .5em;
-  padding-left: 1em;
+  // padding-left: 1em;
   border-left: 1px solid #ccc;
   width: 100%;
   height: 1.5em;
