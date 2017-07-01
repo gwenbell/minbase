@@ -234,7 +234,8 @@ pre {
   overflow: auto;
   margin-top: 3em;
   margin-bottom: 3em;
-  width: 600px;
+  width: 90%;
+  max-width: 600px;
   z-index: 5;
 }
 
@@ -310,7 +311,7 @@ pre {
 
 .hypertabs__tabs {
   min-width: 0px;
-  width: 95%;
+  width: 100%;
   border-radius 2px;
 }
 
