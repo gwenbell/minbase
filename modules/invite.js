@@ -42,7 +42,6 @@ exports.create = function (api) {
       }, function (err, sbot) {
         if(err) return cb(err)
         onProgress('Asking pub to follow...')
-        console.log(sbot)
         sbot.invite.use({feed: id}, function (err, msg) {
 
           //if they already follow us, just check we actually follow them.
@@ -116,4 +115,5 @@ exports.create = function (api) {
     }
   }
 }
+
 
