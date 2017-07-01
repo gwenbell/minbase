@@ -47,7 +47,11 @@ module.exports = {
     sbot_gossip_connect: true,
     sbot_progress: true,
     sbot_publish: true,
-    sbot_whoami: true
+    sbot_whoami: true,
+
+    sbot_stream: true,
+    sbot_friends_get: true,
+    sbot_signs_get: true
   },
 
   create: function (api) {
@@ -172,10 +176,19 @@ module.exports = {
       }),
       sbot_whoami: rec.async(function (cb) {
         sbot.whoami(cb)
-      })
+      }),
+
+      sbot_stream: rec.source(function (opts) {
+        return sbot.stream(opts)
+      }),
+      sbot_friends_get: rec.async(function (opts, cb) {
+        return sbot.friends.get(opts, cb)
+      }),
+      sbot_signs_get: rec.async(function (opts, cb) {
+        return sbot.signs.get(opts, cb)
+      }),
+
     }
   }
 }
-
-
 

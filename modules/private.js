@@ -14,6 +14,7 @@ exports.needs = {
   message_compose: 'first',
   message_unbox: 'first',
   sbot_log: 'first',
+  sbot_user_feed: 'first',
   sbot_whoami: 'first',
   avatar_image_link: 'first',
   emoji_url: 'first'
@@ -70,19 +71,28 @@ exports.create = function (api) {
         )
     
         pull(
-          api.sbot_log({old: false}),
+          api.sbot_log({old: false, name: 'private', private: true}),
           unbox(),
           Scroller(div, content, api.message_render, true, false)
         )
+
+        api.sbot_user_feed({id: id, gt: 0, limit: 1})
+        (null, function (err, first) {
+          
+
+          pull(
+            u.next(api.sbot_log, {reverse: true, limit: 100, name: 'private', private: true}),
+            pull.take(function (m) {
+              return m.value.timestamp > first.value.timestamp
+            }),
+            unbox(),
+            Scroller(div, content, api.message_render, false, false, function (err) {
+              if(err) throw err
+            })
+          )
     
-        pull(
-          u.next(api.sbot_log, {reverse: true, limit: 1000}),
-          unbox(),
-          Scroller(div, content, api.message_render, false, false, function (err) {
-            if(err) throw err
-          })
-        )
-    
+        })
+
         return div
       }
     },
@@ -105,4 +115,8 @@ exports.create = function (api) {
   }
 
 }
+
+
+
+
 

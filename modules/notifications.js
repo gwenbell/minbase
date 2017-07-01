@@ -136,7 +136,7 @@ exports.create = function (api) {
         )
 
         pull(
-          u.next(api.sbot_log, {old: false, limit: 100}),
+          u.next(api.sbot_log, {old: false, limit: 100, name: 'notifications'}),
           unbox(),
           notifications(ids),
           pull.filter(),
@@ -144,7 +144,7 @@ exports.create = function (api) {
         )
 
         pull(
-          u.next(api.sbot_log, {reverse: true, limit: 100, live: false}),
+          u.next(api.sbot_log, {reverse: true, limit: 100, live: false, name: 'notifications'}),
           unbox(),
           notifications(ids),
           pull.filter(),
