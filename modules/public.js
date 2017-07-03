@@ -33,12 +33,12 @@ exports.create = function (api) {
         )
 
         pull(
-          u.next(api.sbot_log, {old: false, limit: 100, name: 'public'}),
+          u.next(api.sbot_log, {old: false, limit: 200, name: 'public'}),
           Scroller(div, content, api.message_render, true, false)
         )
 
         pull(
-          u.next(api.sbot_log, {reverse: true, limit: 100, live: false, name: 'public'}),
+          u.next(api.sbot_log, {reverse: true, limit: 200, live: false, name: 'public'}),
           Scroller(div, content, api.message_render, false, false)
         )
 
