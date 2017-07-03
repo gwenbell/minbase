@@ -40,10 +40,34 @@ exports.create = function (api) {
     var accessories
     meta = meta || {}
     if(!meta.type) throw new Error('message must have type')
+
+    var publishBtn = h('button.compose__button', 'Preview', {onclick: publish})
+
+    var channel = h('input', {
+      placeholder: '#channel',
+      value: meta.channel ? `#${meta.channel}` : '',
+      disabled: meta.channel ? true : false,
+      title: meta.channel ? 'Reply is in same channel as original message' : '',
+    })
+
     var ta = h('textarea', {
       placeholder: opts.placeholder || 'Write a message',
       style: {height: opts.shrink === false ? '200px' : ''}
     })
+
+    accessories = h('div.row.compose__controls',
+      //hidden until you focus the textarea
+      {style: {display: opts.shrink === false ? '' : 'none'}},
+      channel,
+      api.file_input(function (file) {
+        files.push(file)
+        filesById[file.link] = file
+        var embed = file.type.indexOf('image/') === 0 ? '!' : ''
+        ta.value += embed + '['+file.name+']('+file.link+')'
+        console.log('added:', file)
+      }),
+    publishBtn)
+
 
     if(opts.shrink !== false) {
       var blur
@@ -61,7 +85,7 @@ exports.create = function (api) {
         blur = setTimeout(function () {
           if(ta.value) return
           ta.style.height = '50px'
-          accessories.style.display = 'none'
+          //accessories.style.display = 'none'
         }, 200)
       })
     }
@@ -80,6 +104,8 @@ exports.create = function (api) {
         content = JSON.parse(ta.value)
       } catch (err) {
         meta.text = ta.value
+        meta.channel = (channel.value.startsWith('#') ?
+          channel.value.substr(1).trim() : channel.value.trim()) || null
         meta.mentions = mentions(ta.value).map(function (mention) {
           // merge markdown-detected mention with file info
           var file = filesById[mention.link]
@@ -111,21 +137,11 @@ exports.create = function (api) {
     }
 
 
-    var publishBtn = h('button', 'Preview', {onclick: publish})
     var composer =
-      h('div.compose', h('div.column', ta,
-        accessories = h('div.row.compose__controls',
-          //hidden until you focus the textarea
-          {style: {display: opts.shrink === false ? '' : 'none'}},
-          api.file_input(function (file) {
-            files.push(file)
-            filesById[file.link] = file
-
-            var embed = file.type.indexOf('image/') === 0 ? '!' : ''
-            ta.value += embed + '['+file.name+']('+file.link+')'
-            console.log('added:', file)
-          }),
-          publishBtn)
+      h('div.compose', 
+        h('div.column', 
+          ta, 
+          accessories 
         )
       )
 
@@ -140,7 +156,6 @@ exports.create = function (api) {
     }, {})
 
     return composer
-
   }
 
 }

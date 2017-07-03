@@ -108,6 +108,11 @@ pre {
 
 .compose {
   width: 100%;
+  margin-bottom: .5em;
+}
+
+.compose__button {
+  float: right;
 }
 
 /* messages */
