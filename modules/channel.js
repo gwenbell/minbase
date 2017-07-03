@@ -73,7 +73,7 @@ exports.create = function (api) {
       if(err) return
 
       channels = []
-
+      return //XXX disable channels, (TEMPORARY)
       pull(
         api.sbot_query({query: [filter, map, reduce]}),
         pull.collect(function (err, chans) {

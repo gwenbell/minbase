@@ -50,6 +50,9 @@ exports.create = function (api) {
   exports.avatar_action = function (id) {
     var follows_you, you_follow
 
+    var state = h('label')
+    var label = h('span')
+
     var self_id = require('../keys').id
     api.follower_of(self_id, id, function (err, f) {
       you_follow = f
@@ -59,9 +62,6 @@ exports.create = function (api) {
       follows_you = f
       update()
     })
-
-    var state = h('label')
-    var label = h('span')
 
     function update () {
       state.textContent = (
@@ -88,3 +88,4 @@ exports.create = function (api) {
   }
   return exports
 }
+
