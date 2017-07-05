@@ -81,10 +81,10 @@ exports.create = function (api) {
           
 
           pull(
-            u.next(api.sbot_log, {reverse: true, limit: 100, name: 'private', private: true}),
-            pull.take(function (m) {
-              return m.value.timestamp > first.value.timestamp
-            }),
+            u.next(api.sbot_log, {reverse: true, limit: 1000, name: 'private', private: true}),
+            //pull.take(function (m) {
+            //  return m.value.timestamp > first.value.timestamp
+            //}), <-- "seems to break private scroller" -Ev
             unbox(),
             Scroller(div, content, api.message_render, false, false, function (err) {
               if(err) throw err
