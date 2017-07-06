@@ -80,8 +80,8 @@ arr-diff@^2.0.0:
     arr-flatten "^1.0.1"
 
 arr-flatten@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/arr-flatten/-/arr-flatten-1.0.3.tgz#a274ed85ac08849b6bd7847c4580745dc51adfb1"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/arr-flatten/-/arr-flatten-1.1.0.tgz#36048bbff4e7b47e136644316c99669ea5ae91f1"
 
 array-union@^1.0.1:
   version "1.0.2"
@@ -2665,6 +2665,16 @@ ssb-blobs@^1.0.1:
     pull-stream "^3.3.0"
     ssb-ref "^2.3.0"
 
+ssb-client@4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/ssb-client/-/ssb-client-4.4.1.tgz#aa0914c1ef0747fc360bc19defce2cebfaff4115"
+  dependencies:
+    explain-error "^1.0.1"
+    multiserver "^1.7.0"
+    muxrpc "^6.3.3"
+    ssb-config "^2.0.0"
+    ssb-keys "^7.0.9"
+
 ssb-client@^4.4.1:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/ssb-client/-/ssb-client-4.5.0.tgz#a225e2db4a3aab43661b27a644b3837cf36cb910"
@@ -2697,8 +2707,8 @@ ssb-ebt@0.0.7:
     pull-stream "^3.5.0"
 
 ssb-ebt@^1.1.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/ssb-ebt/-/ssb-ebt-1.2.2.tgz#400bf0a2b6812425ab0efcda71111c9ba13e5c58"
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/ssb-ebt/-/ssb-ebt-1.2.3.tgz#a6d4c651b3cd7e0a9618b4d9d0a3e0c93dbd3bf9"
   dependencies:
     base64-url "^1.3.3"
     cont "^1.0.3"
