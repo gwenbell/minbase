@@ -16,7 +16,6 @@ function ancestor (el) {
 }
 
 exports.needs = {
-  emoji_url: 'first',
   screen_view: 'first', 
   search_box: 'first', 
   blob_url: 'first',
