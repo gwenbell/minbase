@@ -7,7 +7,6 @@ var open = require('open-external')
 var ref = require('ssb-ref')
 var visualize = require('visualize-buffer')
 var id = require('../keys').id
-var getAvatar = require('ssb-avatar')
 
 function ancestor (el) {
   if(!el) return
@@ -16,6 +15,7 @@ function ancestor (el) {
 }
 
 exports.needs = {
+  avatar_image_link: 'first',
   screen_view: 'first', 
   search_box: 'first', 
   blob_url: 'first',
@@ -65,16 +65,7 @@ exports.create = function (api) {
     })
 
     var img = visualize(new Buffer(id.substring(1), 'base64'), 256)
-    img.classList.add('avatar--full')
-    var selected = null, selected_data = null
-
-    getAvatar({links: api.sbot_links}, id, id, function (err, avatar) {
-      if (err) return console.error(err)
-      //don't show user has already selected an avatar.
-      if(selected) return
-      if(ref.isBlob(avatar.image))
-        img.src = api.blob_url(avatar.image)
-    })
+    img = api.avatar_image_link(id, 'full')
      
     //reposition hypertabs menu to inside a container...
     tabs.insertBefore(h('div.header.left',
