@@ -49,6 +49,7 @@ if (argv[0] == 'server') {
     .use(require('ssb-query'))
     .use(require('ssb-ebt'))
     .use(require('ssb-signs'))
+    .use(require('./serve'))
     //.use(require('ssb-fulltext'))
 
   // add third-party plugins
@@ -61,9 +62,6 @@ if (argv[0] == 'server') {
 
   // write RPC manifest to ~/.ssb/manifest.json
   fs.writeFileSync(manifestFile, JSON.stringify(server.getManifest(), null, 2))
-
-  var lite = require('./serve')
-  lite.serve()
 
 } else {
 
