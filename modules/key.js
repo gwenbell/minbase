@@ -41,7 +41,7 @@ exports.create = function (api) {
                     }}, 'Delete Pub')
                   ),
                   h('hr'),
-                  h('form',
+                  h('form.column',
                     importKey,
                     importRemote,
                     h('button', {onclick: function (e){
