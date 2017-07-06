@@ -4,7 +4,6 @@ var pull = require('pull-stream')
 var u = require('../util')
 var keyscroll = require('../keyscroll')
 var open = require('open-external')
-var ref = require('ssb-ref')
 var visualize = require('visualize-buffer')
 var id = require('../keys').id
 
@@ -18,16 +17,12 @@ exports.needs = {
   avatar_image_link: 'first',
   screen_view: 'first', 
   search_box: 'first', 
-  blob_url: 'first',
   menu: 'first', 
-  sbot_links: 'first'
 }
 
 exports.gives = 'screen_view'
 
-
 exports.create = function (api) {
-
 
   return function (path) {
     if(path !== 'tabs')
@@ -59,7 +54,6 @@ exports.create = function (api) {
         if(!el.title) el.title = path
         el.scroll = keyscroll(el.querySelector('.scroller__content'))
         tabs.add(el, change)
-  //      localStorage.openTabs = JSON.stringify(tabs.tabs)
         return change
       }
     })
@@ -75,14 +69,8 @@ exports.create = function (api) {
       h('div.header__tabs', tabs.firstChild), //tabs
       h('div.header__search', h('div', search), api.menu())
     ), tabs.firstChild)
-  //  tabs.insertBefore(search, tabs.firstChild.nextSibling)
 
-    var saved = []
-  //  try { saved = JSON.parse(localStorage.openTabs) }
-  //  catch (_) { }
-
-    if(!saved || saved.length < 3)
-      saved = ['Public', 'Direct', 'Mentions', 'Key']
+    var saved = ['Public', 'Direct', 'Mentions', 'Key']
 
     saved.forEach(function (path) {
       var el = api.screen_view(path)
