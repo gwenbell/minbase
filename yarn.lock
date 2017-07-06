@@ -32,12 +32,14 @@ ajv@^4.9.1:
     json-stable-stringify "^1.0.1"
 
 aligned-block-file@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/aligned-block-file/-/aligned-block-file-1.0.0.tgz#be5407df58d43aab101cb010a67df4935500cbf0"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/aligned-block-file/-/aligned-block-file-1.1.0.tgz#2f1ae53ca60994687bf6ffc5e7d703a7728926fc"
   dependencies:
     hashlru "^2.1.0"
+    int53 "^0.2.4"
     mkdirp "^0.5.1"
     obv "0.0.0"
+    uint48be "^1.0.1"
 
 ansi-escapes@^1.0.0:
   version "1.4.0"
@@ -1042,6 +1044,10 @@ inherits@2, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.0, inherits@~2.0.1, 
 ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
+
+int53@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/int53/-/int53-0.2.4.tgz#5ed8d7aad6c5c6567cae69aa7ffc4a109ee80f86"
 
 ip@^0.3.3, ip@~0.3.2:
   version "0.3.3"
@@ -2657,17 +2663,7 @@ ssb-blobs@^1.0.1:
     pull-stream "^3.3.0"
     ssb-ref "^2.3.0"
 
-ssb-client@4.4.1:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/ssb-client/-/ssb-client-4.4.1.tgz#aa0914c1ef0747fc360bc19defce2cebfaff4115"
-  dependencies:
-    explain-error "^1.0.1"
-    multiserver "^1.7.0"
-    muxrpc "^6.3.3"
-    ssb-config "^2.0.0"
-    ssb-keys "^7.0.9"
-
-ssb-client@^4.4.1:
+ssb-client@^4.4.1, ssb-client@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/ssb-client/-/ssb-client-4.5.0.tgz#a225e2db4a3aab43661b27a644b3837cf36cb910"
   dependencies:
@@ -3067,6 +3063,10 @@ typewiselite@^1.0.0, typewiselite@~1.0.0:
 uid-number@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
+
+uint48be@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/uint48be/-/uint48be-1.0.2.tgz#0bea5a642953b502cff8c3469d08ed5ab543c8f6"
 
 ultron@1.0.x:
   version "1.0.2"
