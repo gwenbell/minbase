@@ -16,7 +16,6 @@ function ancestor (el) {
 }
 
 exports.needs = {
-  emoji_url: 'first',
   screen_view: 'first', 
   search_box: 'first', 
   blob_url: 'first',
@@ -82,9 +81,6 @@ exports.create = function (api) {
       h('div', 
         h('a', {href: '#' + id}, img)
       ),
-      h('p.edit', 
-        h('a', {innerHTML: '<a href="#'+ id +'">Edit your profile</a> <a href="#Key"><img src="' + api.emoji_url('key') + '" class="emoji" /></a>'})
-      ),
       h('div.header__tabs', tabs.firstChild), //tabs
       h('div.header__search', h('div', search), api.menu())
     ), tabs.firstChild)
@@ -95,7 +91,7 @@ exports.create = function (api) {
   //  catch (_) { }
 
     if(!saved || saved.length < 3)
-      saved = ['Public', 'Direct', 'Mentions']
+      saved = ['Public', 'Direct', 'Mentions', 'Key']
 
     saved.forEach(function (path) {
       var el = api.screen_view(path)
