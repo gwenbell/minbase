@@ -9,8 +9,7 @@ var Progress = require('hyperprogress')
 exports.needs = {
   sbot_publish: 'first',
   sbot_gossip_connect: 'first',
-  follower_of: 'first',
-  invite_parse: 'first',
+  follower_of: 'first'
 }
 
 exports.gives = {
@@ -25,7 +24,6 @@ exports.create = function (api) {
     invite_parse: function (invite) {
       return ref.parseInvite(invite)
     },
-
     invite_accept: function (invite, onProgress, cb) {
       var data = self.invite_parse(invite)
       if(!data) return cb(new Error('not a valid invite code:' + invite))
