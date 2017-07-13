@@ -2108,9 +2108,9 @@ pull-reconnect@^0.0.3:
   dependencies:
     pull-defer "^0.2.2"
 
-"pull-scroll@git+ssh://git@github.com:dominictarr/pull-scroll.git#visibility":
-  version "1.0.8"
-  resolved "git+ssh://git@github.com:dominictarr/pull-scroll.git#290cc1aad6f5bc74f0ec75b20fe2ca96faf8ecf3"
+pull-scroll@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/pull-scroll/-/pull-scroll-1.0.9.tgz#07d1548e3bbb2b400b15c57f6eb8ca4012a6fe29"
   dependencies:
     obv "0.0.1"
     pull-pause "0.0.0"
