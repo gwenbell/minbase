@@ -2,8 +2,6 @@ var h = require('hyperscript')
 var u = require('../util')
 var pull = require('pull-stream')
 
-var plugs = require('../plugs')
-
 exports.needs = {
   message_confirm: 'first',
   message_link: 'first',

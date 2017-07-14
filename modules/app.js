@@ -1,4 +1,3 @@
-var plugs = require('../plugs')
 var h = require('hyperscript')
 
 module.exports = {
