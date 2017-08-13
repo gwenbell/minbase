@@ -1,3 +1,5 @@
+![minbase.png](minbase.png)
+
 # Minbase
 
 Minbase is an unopinionated minimal base on which to build opinionated [Secure Scuttlebutt](http://scuttlebot.io) clients. 
@@ -42,8 +44,6 @@ Minbase will start a local sbot instance. Make sure you've turned off scuttlebot
 You'll see a lite client invite on your command line. Click the lite client invite and accept to generate a new identity and load the websocket server into your browser. If you want to import your ssb identity, load your public/private key from `.ssb/secret` into the 'Your Key' tab in minbase.
 
 Minbase also works with Electron. `sudo npm install -g electro` and run minbase using electron `electro index` -- this won't start the scuttlebot server, so do that in another window.
-
-![minbase.png](minbase.png)
 
 ## License
 
