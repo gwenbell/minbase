@@ -6,8 +6,8 @@ exports.needs = {
   message_content: 'first',
   message_content_mini: 'first',
   avatar: 'first',
-  avatar_name: 'first',
-  avatar_link: 'first',
+  // avatar_name: 'first',
+  // avatar_link: 'first',
   message_meta: 'map',
   message_action: 'map',
   message_link: 'first'
@@ -84,7 +84,7 @@ exports.create = function (api) {
     )
 
     // ); hyperscript does not seem to set attributes correctly.
-    msg.setAttribute('tabindex', '0')
+    //msg.setAttribute('tabindex', '0')
 
     return msg
   }

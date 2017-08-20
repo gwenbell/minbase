@@ -48,7 +48,6 @@ module.exports = {
     sbot_progress: true,
     sbot_publish: true,
     sbot_whoami: true,
-
     sbot_stream: true,
     sbot_friends_get: true,
     sbot_signs_get: true
@@ -151,7 +150,6 @@ module.exports = {
               })
             }
           })
-
         feed.add(content, function (err, msg) {
           if(err) console.error(err)
           else if(!cb) console.log(msg)
@@ -161,7 +159,6 @@ module.exports = {
       sbot_whoami: rec.async(function (cb) {
         sbot.whoami(cb)
       }),
-
       sbot_stream: rec.source(function (opts) {
         return sbot.stream(opts)
       }),
@@ -171,7 +168,6 @@ module.exports = {
       sbot_signs_get: rec.async(function (opts, cb) {
         return sbot.signs.get(opts, cb)
       }),
-
     }
   }
 }

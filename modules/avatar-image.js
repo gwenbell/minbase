@@ -1,12 +1,11 @@
 'use strict'
+
 var getAvatar = require('ssb-avatar')
 var h = require('hyperscript')
 var ref = require('ssb-ref')
 var path = require('path')
 var visualize = require('visualize-buffer')
-
 var pull = require('pull-stream')
-
 var self_id = require('../keys').id
 
 exports.needs = {
