@@ -1,4 +1,3 @@
-var signifier = require('../plugs').first(exports.signifier = [])
 var h = require('hyperscript')
 var isBlob = require('ssb-ref').isBlob
 

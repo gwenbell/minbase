@@ -56,8 +56,6 @@ exports.create = function (api) {
     })
 
     accessories = h('div.row.compose__controls',
-      //hidden until you focus the textarea
-      {style: {display: opts.shrink === false ? '' : 'none'}},
       channel,
       api.file_input(function (file) {
         files.push(file)
@@ -79,14 +77,8 @@ exports.create = function (api) {
         accessories.style.display = 'block'
       })
       ta.addEventListener('blur', function () {
-        //don't shrink right away, so there is time
-        //to click the publish button.
-        clearTimeout(blur)
-        blur = setTimeout(function () {
-          if(ta.value) return
-          ta.style.height = '50px'
-          //accessories.style.display = 'none'
-        }, 200)
+        if(ta.value) return
+        ta.style.height = '50px'
       })
     }
 

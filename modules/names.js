@@ -12,10 +12,6 @@ function all(stream, cb) {
   pull(stream, pull.collect(cb))
 }
 
-//var plugs = require('../plugs')
-//var sbot_links2 = plugs.first(exports.sbot_links2 = [])
-//var sbot_query = plugs.first(exports.sbot_query = [])
-//
 exports.needs = {
   sbot_signs_get: 'first',
   sbot_links2: 'first',

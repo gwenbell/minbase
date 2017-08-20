@@ -1,6 +1,14 @@
+![minbase.png](minbase.png)
+
 # Minbase
 
 Minbase is an unopinionated minimal base on which to build opinionated [Secure Scuttlebutt](http://scuttlebot.io) clients. 
+
+Scuttlebot is [An off-grid social network](https://staltz.com/an-off-grid-social-network.html). 
+
+Minbase is maintained by [Everett Bogue](http://evbogue.com/) - [@ev](http://evbogue.com:8807/@8Qee0I/DwI5DHSCi3p5fsl6FyLGArrnDz3ox9qZr5Qc=.ed25519) on ssb. 
+
+### Origins
 
 Minbase is a fork of [Patchbay@6.1.3](https://github.com/ssbc/patchbay/commit/e3a918ef0b3864578f624ca14e12fe1cf0079b3a), which was originally written by Dominic Tarr. In the beginning I wanted to find out just how minimal Patchbay could be, with the idea that 'minbay' would get merged into Master as a depject configuration, however that never happened so now it's a fork as Patchbay@7 and Minbase are now barely resemble each other. Minbase shares a lot of the original Patchbay@6 code, with minimal modifications. 
 
@@ -11,26 +19,32 @@ Minbase is a fork of [Patchbay@6.1.3](https://github.com/ssbc/patchbay/commit/e3
 
 ## Installation
 
-Clone minbase off Github or git-ssb
-
-This works best with [yarn](http://yarnpkg.com), until Flume hits master.
-
-``` 
-git clone ssb://%+tyUthD1L689osLUj8LNLV4smRKpO7Wu07DB+LMd7TQ=.sha256 minbase # git clone git@github.com:evbogue/minbase.git
-cd minbase
-yarn 
-yarn start
+With [git-ssb](http://gitmx.com/%25n92DiQh7ietE%2BR%2BX%2FI403LQoyf2DtR3WQfCkDKlheQU%3D.sha256)
+```
+git clone ssb://%+tyUthD1L689osLUj8LNLV4smRKpO7Wu07DB+LMd7TQ=.sha256 minbase 
 ```
 
-You'll see a lite client invite, click that and it'll connect in your browser. Move your key into the client if you want to use your identity from `.ssb/secret` by clicking on the 'lock' icon in the minbase lite client.
+With [Github](http://github.com/evbogue/minbase)
 
-![minbase.png](minbase.png)
+```
+git clone git@github.com:evbogue/minbase.git
+```
+
+Next use npm or yarn to install dependencies, build the client, and start minbase.
+
+``` 
+cd minbase
+npm install
+npm run build
+npm start
+```
+
+Minbase will start a local sbot instance. Make sure you've turned off scuttlebot if you already have a server running.
+
+You'll see a lite client invite on your command line. Click the lite client invite and accept to generate a new identity and load the websocket server into your browser. If you want to import your ssb identity, load your public/private key from `.ssb/secret` into the 'Your Key' tab in minbase.
+
+Minbase also works with Electron. `sudo npm install -g electro` and run minbase using electron `electro index` -- this won't start the scuttlebot server, so do that in another window.
 
 ## License
 
 MIT
-
-
-
-
-

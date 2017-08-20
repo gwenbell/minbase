@@ -1,13 +1,12 @@
-'use strict'
 var h = require('hyperscript')
 var pull = require('pull-stream')
 var paramap = require('pull-paramap')
 var cat = require('pull-cat')
 var human = require('human-time')
 var combobox = require('hypercombo')
-var getAvatar = require('ssb-avatar')
 var KVGraph = require('kvgraph')
 var mergeRepo = require('ssb-git/merge')
+var self_id = require('../keys').id
 
 exports.needs = {
   message_link: 'first',
@@ -26,7 +25,6 @@ exports.gives = {
   message_content: true
 }
 
-var self_id = require('../keys').id
 
 function shortRefName(ref) {
   return ref.replace(/^refs\/(heads|tags)\//, '')
@@ -83,23 +81,12 @@ exports.create = function (api) {
     )
   }
 
-  function repoText(id) {
-    var text = document.createTextNode(id.substr(0, 10) + '…')
-    getAvatar({links: api.sbot_links, get: api.sbot_get}, self_id, id,
-        function (err, avatar) {
-      if(err) return console.error(err)
-      if (avatar.name[0] !== '%') avatar.name = '%' + avatar.name
-      text.nodeValue = avatar.name
-    })
-    return text
-  }
-
   function repoLink(id) {
-    return h('a', {href: '#'+id}, repoText(id))
+    return h('a', {href: '#'+id}, api.avatar_name(id))
   }
 
   function repoName(id) {
-    return h('ins', repoText(id))
+    return h('ins', api.avatar_name(id))
   }
 
   function getIssueState(id, cb) {

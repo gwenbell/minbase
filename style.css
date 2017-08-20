@@ -51,7 +51,7 @@ hr {
 .row {
   display: flex;
   flex-direction: row;
-  // min-height:0px;
+  min-height:0px;
 }
 
 .end {

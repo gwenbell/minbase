@@ -1,9 +1,7 @@
 var h = require('hyperscript')
 var u = require('../util')
 var pull = require('pull-stream')
-var Scroller = require('../pull-scroll')
-
-var plugs = require('../plugs')
+var Scroller = require('pull-scroll')
 
 // from ssb-ref
 var refRegex = /((?:@|%|&)[A-Za-z0-9\/+]{43}=\.[\w\d]+)/g
