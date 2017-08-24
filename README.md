@@ -39,7 +39,7 @@ npm run build
 npm start
 ```
 
-Minbase will start a local sbot instance. Make sure you've turned off scuttlebot if you already have a server running.
+Minbase will start a local sbot instance using `ssb-party`. 
 
 You'll see a lite client invite on your command line. Click the lite client invite and accept to generate a new identity and load the websocket server into your browser. If you want to import your ssb identity, load your public/private key from `.ssb/secret` into the 'Your Key' tab in minbase.
 
