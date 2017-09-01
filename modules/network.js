@@ -9,7 +9,6 @@ exports.needs = {
 }
 
 exports.gives = {
-  builtin_tabs: true,
   screen_view: true
 }
 
@@ -81,10 +80,6 @@ function duration (s) {
 exports.create = function (api) {
 
   return {
-    builtin_tabs: function () {
-      return ['Network']
-    },
-
     screen_view: function (path) {
 
       if(path !== 'Network') return

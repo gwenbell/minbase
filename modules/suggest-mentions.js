@@ -7,8 +7,7 @@ function isImage (filename) {
 exports.needs = {
   sbot_links2: 'first',
   blob_url: 'first',
-  signified: 'first',
-  builtin_tabs: 'map'
+  signified: 'first'
 }
 
 exports.gives = {
