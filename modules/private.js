@@ -21,7 +21,6 @@ exports.needs = {
 }
 
 exports.gives = {
-  builtin_tabs: true,
   screen_view: true,
   message_meta: true,
   message_content_mini: true
@@ -42,10 +41,6 @@ exports.create = function (api) {
   }
 
   return {
-    builtin_tabs: function () {
-      return ['Direct']
-    },
-
     screen_view: function (path) {
       if(path === 'Direct') {
         var id = require('../keys').id

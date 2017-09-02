@@ -25,9 +25,9 @@ exports.create = function (api) {
     var div = h('div.message.message--mini',
       h('div.title',
         h('div.message_meta', api.message_meta(msg)),
-        h('div.avatar', api.avatar(msg.value.author, 'thumbnail'))
-      ),
-      h('div.message_content', el)
+        h('div.avatar', api.avatar_link(msg.value.author, api.avatar_name(msg.value.author), ''), ' ', el)
+      )
+      //h('div.message_content', el)
     )
     div.setAttribute('tabindex', '0')
     return div
@@ -38,7 +38,8 @@ exports.create = function (api) {
     if(el) return mini(msg, el)
 
     var el = api.message_content(msg)
-    if(!el) return mini(msg, message_content_mini_fallback(msg))
+    // if(!el) return mini(msg, message_content_mini_fallback(msg))
+    if(!el) return
 
     var links = []
     for(var k in CACHE) {

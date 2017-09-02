@@ -4,10 +4,6 @@ function idLink (id) {
   return h('a', {href:'#'+id}, id.substring(0, 10)+'...')
 }
 
-function asLink (ln) {
-  return 'string' === typeof ln ? ln : ln.link
-}
-
 exports.needs = {
   blob_url: 'first'
 }

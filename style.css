@@ -94,14 +94,13 @@ pre {
 /* scrolling feeds, threads */
 
 .scroller {
-  max-width: 600px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  flex: 1;
 }
 
 .scroller__wrapper {
-  width: 100%;
-  flex: 1;
 }
 
 /* compose */
@@ -303,13 +302,13 @@ pre {
 .left {
   position: fixed;
   left: 0;
-  width: 17%;
+  width: 25%;
   height: 100%;
 }
 
 .hypertabs__content {
   margin-left: auto;
-  width: 83%;
+  width: 75%;
 }
 
 /* --- hypertabs ------- */

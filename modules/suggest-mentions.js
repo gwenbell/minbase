@@ -1,4 +1,5 @@
 var pull = require('pull-stream')
+
 function isImage (filename) {
   return /\.(gif|jpg|png|svg)$/i.test(filename)
 }
@@ -6,8 +7,7 @@ function isImage (filename) {
 exports.needs = {
   sbot_links2: 'first',
   blob_url: 'first',
-  signified: 'first',
-  builtin_tabs: 'map'
+  signified: 'first'
 }
 
 exports.gives = {

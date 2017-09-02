@@ -56,6 +56,7 @@
     "ssb-links": "^3.0.0",
     "ssb-markdown": "^3.0.0",
     "ssb-mentions": "^0.1.0",
+    "ssb-party": "^0.5.1",
     "ssb-query": "^1.0.0",
     "ssb-ref": "^2.7.1",
     "ssb-signs": "^1.0.0",
@@ -67,7 +68,7 @@
   },
   "scripts": {
     "build": "node scripts/style.js && mkdir -p build && browserify index.js | indexhtmlify > build/index.html",
-    "start": "node sbot server --allowPrivate"
+    "start": "node serve.js"
   },
   "author": "Everett Bogue <ev@evbogue.com> (http://evbogue.com)",
   "license": "MIT"

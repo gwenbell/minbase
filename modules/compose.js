@@ -56,7 +56,6 @@ exports.create = function (api) {
     })
 
     accessories = h('div.row.compose__controls',
-      channel,
       api.file_input(function (file) {
         files.push(file)
         filesById[file.link] = file
@@ -133,6 +132,7 @@ exports.create = function (api) {
       h('div.compose', 
         h('div.column', 
           ta, 
+          channel,
           accessories 
         )
       )

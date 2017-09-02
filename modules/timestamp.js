@@ -1,8 +1,6 @@
 var h = require('hyperscript')
 var human = require('human-time')
 
-exports.needs = {}
-
 exports.gives = 'message_meta'
 
 exports.create = function () {

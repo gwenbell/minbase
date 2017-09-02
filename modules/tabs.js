@@ -107,7 +107,6 @@ exports.create = function (api) {
         el.id = el.id || path
         el.scroll = keyscroll(el.querySelector('.scroller__content'))
         tabs.add(el, !ev.ctrlKey, !!ev.shiftKey)
-  //      localStorage.openTabs = JSON.stringify(tabs.tabs)
       }
 
       return false

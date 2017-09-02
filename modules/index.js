@@ -28,7 +28,6 @@ module.exports = {
   "raw.js":  require('./raw.js'),
   "post.js":  require('./post.js'),
   "private.js":  require('./private.js'),
-  "pub.js":  require('./pub.js'),
   "public.js":  require('./public.js'),
   "network.js":  require('./network.js'),
   "relationships.js":  require('./relationships.js'),
