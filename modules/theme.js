@@ -10,6 +10,11 @@ exports.gives = {
 exports.create = function (api) {
   return {
     screen_view: function (path, sbot) {
+      if (localStorage.style === null) {
+        localStorage.style = '.screen {background: red;}'
+      }
+      document.head.appendChild(h('style', localStorage.style))
+
       if(path === 'Theme') {
         var theme = h('textarea.theme', localStorage.style)
         var content = h('div.column.scroller__content')

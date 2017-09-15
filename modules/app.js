@@ -7,11 +7,6 @@ module.exports = {
     return function () {
       document.head.appendChild(h('style', require('../style.css.json')))
       
-      if (localStorage.style === null) {
-        localStorage.style = '.screen {background: red;}'
-      }
-      document.head.appendChild(h('style', localStorage.style))
-
       window.addEventListener('error', window.onError = function (e) {
         document.body.appendChild(h('div.error',
           h('h1', e.message),
