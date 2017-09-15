@@ -24,6 +24,7 @@ module.exports = {
   "message-name.js":  require('./message-name.js'),
   "message.js":  require('./message.js'),
   "identify.js": require('./identify.js'),
+  "theme.js": require('./theme.js'),
   "names.js":  require('./names.js'),
   "raw.js":  require('./raw.js'),
   "post.js":  require('./post.js'),
