@@ -1,36 +1,47 @@
 var h = require('hyperscript')
+var id = require('../keys').id
 
 module.exports = {
-  needs: {screen_view: 'first'},
+  needs: {
+    screen_view: 'first',
+    avatar_name: 'first',
+    avatar_image: 'first'
+  },
   gives: 'app',
+
   create: function (api) {
     return function () {
       document.head.appendChild(h('style', require('../style.css.json')))
-      
-      window.addEventListener('error', window.onError = function (e) {
-        document.body.appendChild(h('div.error',
-          h('h1', e.message),
-          h('big', h('code', e.filename + ':' + e.lineno)),
-          h('pre', e.error ? (e.error.stack || e.error.toString()) : e.toString())))
-      })
 
       function hash() {
         return window.location.hash.substring(1)
       }
 
-      var view = api.screen_view(hash() || 'tabs')
+      var view = api.screen_view(hash() || 'Public')
+
 
       var screen = h('div.screen.column', view)
 
       window.onhashchange = function (ev) {
         var _view = view
-        view = api.screen_view(hash() || 'tabs')
+        view = api.screen_view(hash() || 'Public')
         if(_view) screen.replaceChild(view, _view)
         else document.body.appendChild(view)
       }
 
       document.body.appendChild(screen)
-      return screen
+
+      document.body.appendChild(h('div.navbar',
+        h('div.internal', 
+          h('li', h('a', {href: '#' + id}, api.avatar_image(id, 'tiny'))),
+          h('li', h('a', {href: '#' + id}, api.avatar_name(id))),
+          h('li', h('a', {href: '#'}, 'Home')),
+          h('li', h('a', {href: '#Direct'}, 'Direct')),
+          h('li', h('a', {href: '#Mentions'}, 'Mentions')),
+          h('li', h('a', {href: '#Key'}, 'Key')),
+          h('li', h('a', {href: '#Theme'}, 'Theme'))
+        )
+      ))
     }
   }
 }
