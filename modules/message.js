@@ -23,9 +23,9 @@ exports.create = function (api) {
 
   function mini(msg, el) {
     var div = h('div.message.message--mini',
-      h('div.title',
-        h('div.message_meta', api.message_meta(msg)),
-        h('div.avatar', api.avatar_link(msg.value.author, api.avatar_name(msg.value.author), ''), ' ', el)
+      h('div.title.row',
+        h('div.avatar', api.avatar_link(msg.value.author, api.avatar_name(msg.value.author), ''), ' ', el),
+        h('div.message_meta.row', api.message_meta(msg))
       )
       //h('div.message_content', el)
     )
@@ -60,9 +60,9 @@ exports.create = function (api) {
       ))
 
     var msg = h('div.message',
-      h('div.title',
-        h('div.message_meta', api.message_meta(msg)),
-        h('div.avatar', api.avatar(msg.value.author, 'thumbnail'))
+      h('div.title.row',
+        h('div.avatar', api.avatar(msg.value.author, 'thumbnail')),
+        h('div.message_meta.row', api.message_meta(msg))
       ),
       h('div.message_content', el),
       h('div.message_actions',
