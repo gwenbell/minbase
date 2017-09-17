@@ -228,35 +228,19 @@ textarea {
 .avatar--profile {
   width: 5em;
   height: 5em;
-  float: left;
+  vertical-align: top;
 }
-
-.avatar--full {
-  width: 100%;
-}
-
-.avatar--large {
-  width: 3.5em;
-  height: 3.5em;
-}
-
 .avatar--thumbnail {
   width: 2.5em;
   height: 2.5em;
-  float: left;
   margin-right: .5ex;
+  vertical-align: top;
 }
 
 .avatar--tiny {
   width: 26px;
   height: 26px;
 }
-
-.avatar--fullsize {
-  width: 50%;
-  border-radius: 5px;
-}
-
 .profile {
   padding: .5ex;
 }
